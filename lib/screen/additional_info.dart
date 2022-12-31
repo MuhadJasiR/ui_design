@@ -109,6 +109,18 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                   style: TextStyle(
                       fontSize: 22, color: Color.fromARGB(255, 106, 106, 106)),
                 ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 250),
+                child: Column(
+                  children: [
+                    Text(
+                      "version",
+                      style: TextStyle(color: Colors.black45),
+                    ),
+                    Text("2.4.2")
+                  ],
+                ),
               )
             ],
           ),

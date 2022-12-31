@@ -45,7 +45,7 @@ class _FirstPageState extends State<FirstPage> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(
-                                  bottom: 0, right: 75, left: 10, top: 10),
+                                  bottom: 0, right: 0, left: 10, top: 10),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -70,7 +70,7 @@ class _FirstPageState extends State<FirstPage> {
                                     children: [
                                       Row(
                                         mainAxisAlignment:
-                                            MainAxisAlignment.spaceAround,
+                                            MainAxisAlignment.spaceBetween,
                                         children: [
                                           const Text(
                                             'In stock',
@@ -80,7 +80,7 @@ class _FirstPageState extends State<FirstPage> {
                                           ),
                                           Padding(
                                             padding:
-                                                const EdgeInsets.only(left: 15),
+                                                const EdgeInsets.only(left: 85),
                                             child: Switch(
                                                 value: isSwitch,
                                                 onChanged: ((value) {
@@ -134,10 +134,10 @@ class _FirstPageState extends State<FirstPage> {
 }
 
 List products = [
-  'asset/tshirt.jpeg',
-  'asset/tsh.jpeg',
-  'asset/sdrfgedf.jpg',
-  'asset/images.jpeg',
+  'asset/image4.jpg',
+  'asset/image1.png',
+  'asset/image2.jpeg',
+  'asset/image3.jpg',
 ];
 List text = ['Couch Potato', 'Couch Potato', 'Mug | Explore', 'Combo Blahst'];
 List price = [
