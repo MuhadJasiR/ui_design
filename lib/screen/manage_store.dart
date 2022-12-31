@@ -13,6 +13,7 @@ class MangeStore extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Color.fromARGB(255, 243, 243, 243),
         appBar: AppBar(
+          centerTitle: true,
           title: Text("Manage Store"),
         ),
         body: Padding(

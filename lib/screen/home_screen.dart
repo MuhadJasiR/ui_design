@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:ui_design/screen/Catalogue.dart';
 import 'package:ui_design/screen/additional_info.dart';
+import 'package:ui_design/screen/dukan.dart';
 import 'package:ui_design/screen/manage_store.dart';
+import 'package:ui_design/screen/oder.dart';
 import 'package:ui_design/screen/payment.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,6 +14,7 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text("Ui Design"),
         ),
         body: Center(
@@ -37,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: ((context) {
-                          return MangeStore();
+                          return const MangeStore();
                         })));
                       },
                       icon: const Icon(Icons.store_outlined),
@@ -48,25 +50,40 @@ class HomeScreen extends StatelessWidget {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: ((context) => PaymentScreen())));
+                                builder: ((context) => const PaymentScreen())));
                       },
                       icon: const Icon(Icons.payment_outlined),
                       label: const Text("Payment"),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
-                      icon: const Icon(Icons.share),
-                      label: const Text("Additional Information"),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (ctx) {
+                          return const CatalogueScreen();
+                        }));
+                      },
+                      icon: const Icon(Icons.shopify_rounded),
+                      label: const Text("Catalogue"),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
-                      icon: const Icon(Icons.share),
-                      label: const Text("Additional Information"),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (ctx) {
+                          return const DukanScreen();
+                        }));
+                      },
+                      icon: const Icon(Icons.business_rounded),
+                      label: const Text("Dukaan Premium"),
                     ),
                     TextButton.icon(
-                      onPressed: () {},
-                      icon: const Icon(Icons.share),
-                      label: const Text("Additional Information"),
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (ctx) {
+                          return OrderScreen();
+                        }));
+                      },
+                      icon: const Icon(Icons.shopping_cart_outlined),
+                      label: const Text("Oders"),
                     ),
                   ],
                 ),

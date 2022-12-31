@@ -12,7 +12,7 @@ class PaymentScreen extends StatelessWidget {
         appBar: AppBar(
           title: Text("Payment"),
           centerTitle: true,
-          actions: [
+          actions: const [
             SizedBox(
                 width: 45,
                 child: Icon(
@@ -87,14 +87,14 @@ class PaymentScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "Default Methord",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w400),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 50),
+                        padding: EdgeInsets.only(left: 50),
                         child: Text(
                           "Online Payments",
                           style: TextStyle(
@@ -113,14 +113,14 @@ class PaymentScreen extends StatelessWidget {
                     height: 19,
                   ),
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "Payment Profile",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w400),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 75),
+                        padding: EdgeInsets.only(left: 75),
                         child: Text(
                           "Bank Account",
                           style: TextStyle(
@@ -149,14 +149,14 @@ class PaymentScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Row(
-                    children: [
+                    children: const [
                       Text(
                         "Payments overview",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w400),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 75),
+                        padding: EdgeInsets.only(left: 75),
                         child: Text(
                           "Life Time",
                           style: TextStyle(
@@ -186,13 +186,13 @@ class PaymentScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(15.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "AMOUNT ON HOLD",
                                 style: TextStyle(
                                     fontSize: 16, color: Colors.white),
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -217,13 +217,13 @@ class PaymentScreen extends StatelessWidget {
                           padding: const EdgeInsets.all(15.0),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               Text(
                                 "AMOUNT RECEIVED",
                                 style: TextStyle(
                                     fontSize: 15, color: Colors.white),
                               ),
-                              const SizedBox(
+                              SizedBox(
                                 height: 10,
                               ),
                               Text(
@@ -311,8 +311,317 @@ class PaymentScreen extends StatelessWidget {
               ),
               title: Text("Order#1688068"),
               subtitle: Text("Jul 12,02:06 PM "),
-              trailing: Text("\u{20B9}${799}"),
-            )
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${799}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${799}" "deposited to:68860200000138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 44,
+                  minWidth: 44,
+                  maxHeight: 64,
+                  maxWidth: 64,
+                ),
+                child: Image.network(
+                    "https://thumbs.dreamstime.com/b/bangkok-thailand-july-cup-ceramic-avengers-miniso-shop-products-sell-first-time-chinese-low-cost-retailer-152466549.jpg"),
+              ),
+              title: Text("Order#128068"),
+              subtitle: Text("Apr 11,02:06 AM "),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${399}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${399}" "deposited to:1760200000138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 44,
+                  minWidth: 44,
+                  maxHeight: 64,
+                  maxWidth: 64,
+                ),
+                child: Image.network(
+                    "https://image.uniqlo.com/UQ/ST3/in/imagesgoods/455828/item/ingoods_07_455828.jpg?width=1008&impolicy=quality_75"),
+              ),
+              title: Text("Order#128068"),
+              subtitle: Text("Apr 11,02:06 AM "),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${449}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${459}" "deposited to:198870200138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 44,
+                  minWidth: 44,
+                  maxHeight: 64,
+                  maxWidth: 64,
+                ),
+                child: Image.network(
+                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIJQ-g8EX9n3PCwMZGrPePpKNdfJaLIq-iLg&usqp=CAU"),
+              ),
+              title: Text("Order#128068"),
+              subtitle: Text("Apr 11,02:06 AM "),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${1999}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${1999}" "deposited to:12324870200138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 44,
+                  minWidth: 44,
+                  maxHeight: 64,
+                  maxWidth: 64,
+                ),
+                child: Image.network(
+                    "https://m.media-amazon.com/images/I/81-CbqEI5LL._SX569_.jpg"),
+              ),
+              title: Text("Order#1688068"),
+              subtitle: Text("Jul 12,02:06 PM "),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${799}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${799}" "deposited to:6909960200000138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
+            ListTile(
+              leading: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minHeight: 44,
+                  minWidth: 44,
+                  maxHeight: 64,
+                  maxWidth: 64,
+                ),
+                child: Image.network(
+                    "https://i.ytimg.com/vi/4plQLJxitt0/maxresdefault.jpg"),
+              ),
+              title: Text("Order#1688068"),
+              subtitle: Text("Jul 12,02:06 PM "),
+              trailing: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Text("\u{20B9}${2999}"),
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: const [
+                      CircleAvatar(
+                        backgroundColor: Colors.green,
+                        radius: 5,
+                      ),
+                      Text("Successful"),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18, bottom: 10, right: 18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "\u{20B9}${2999}" "deposited to:77869960200000138",
+                    style: TextStyle(color: Color.fromARGB(255, 131, 131, 131)),
+                  ),
+                  SizedBox(
+                    height: 7,
+                  ),
+                  Divider(
+                    thickness: 2,
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ),

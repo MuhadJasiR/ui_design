@@ -17,6 +17,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: const Text(
             "Additional Information",
             style: TextStyle(),
