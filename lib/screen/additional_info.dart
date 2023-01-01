@@ -113,7 +113,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
               Padding(
                 padding: const EdgeInsets.only(top: 250),
                 child: Column(
-                  children: [
+                  children: const [
                     Text(
                       "version",
                       style: TextStyle(color: Colors.black45),

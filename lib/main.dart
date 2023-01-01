@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:ui_design/screen/bottom_nav.dart';
 import 'package:ui_design/screen/home_screen.dart';
 
 void main() {
